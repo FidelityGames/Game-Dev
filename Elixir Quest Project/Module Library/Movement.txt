@@ -1,0 +1,74 @@
+if (global.pause) {image_speed = 0;exit;};
+if (global.save = 1) {image_speed = 0;sprite_index = spr_player_idle;exit;};
+if global.player_input = 'Disabled' {image_speed = 0; sprite_index = spr_player_idle; exit;}
+
+
+if global.player_input = 'Enabled'
+{
+    ///Player Input
+    key_right = keyboard_check(ord("D"));
+    key_left = -keyboard_check(ord("A"));
+    key_jump = keyboard_check_pressed(vk_space);
+    key_jump_held = keyboard_check(vk_space);
+    key_down = keyboard_check(ord("S"));
+}
+
+
+if (hsp = 0) 
+{
+    image_speed = 0;
+}
+else image_speed = 1/6;
+//React to inputs
+move = key_right + key_left;
+hsp = move * movespeed;
+if(vsp < 10) vsp += grav;
+
+if(place_meeting(x,y+1,obj_wall_black))
+{
+    if (key_jump)
+    {
+    vsp = -jumpspeed; 
+    audio_play_sound(snd_jump,0,0);
+    }
+}
+
+
+
+if(vsp < 0) && (!key_jump_held) vsp = max(vsp,-jumpspeed/4)
+
+var hsp_final = hsp + hsp_carry;
+hsp_carry = 0;
+//Horizontal Collision
+if(place_meeting(x+hsp_final,y,obj_wall_black))
+{
+    while(!place_meeting(x+sign(hsp_final),y,obj_wall_black))
+    {
+        x +=sign(hsp_final)
+    }
+    hsp_final = 0;
+    hsp = 0;
+}
+x += hsp_final;
+
+//Vertical Collision
+if(place_meeting(x,y+vsp,obj_wall_black))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_wall_black))
+    {
+        y +=sign(vsp)
+    }
+    vsp = 0;
+}
+y += vsp;
+
+//Animation
+if (move!=0) image_xscale = move;
+if (place_meeting(x,y+1,obj_wall_black))
+{
+    if (move!=0) sprite_index = spr_player_walking; else sprite_index = spr_player_idle;
+}
+else
+{
+    if (vsp < 0) sprite_index = spr_player_jump;else sprite_index = spr_player_fall;
+}

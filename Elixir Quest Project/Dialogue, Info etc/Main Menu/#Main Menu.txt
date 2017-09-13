@@ -1,0 +1,7 @@
+Elixir Quest
+
+Continue
+New Game
+Options
+Credits
+Quit Game

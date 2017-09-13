@@ -1,0 +1,7 @@
+Game Paused
+
+Resume
+Inventory
+Options
+Main Menu
+Quit Game

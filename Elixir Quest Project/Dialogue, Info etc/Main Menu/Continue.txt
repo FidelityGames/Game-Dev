@@ -1,0 +1,1 @@
+Continues game at the players last checkpoint

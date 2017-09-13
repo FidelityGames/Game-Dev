@@ -1,0 +1,13 @@
+///Declaring Variables
+grav = 0.2;
+hsp = 0;
+vsp = 0;
+hsp_carry = 0;
+movespeed = 3;
+
+jumpspeed_normal = 5;
+jumpspeed_powerup = 10;
+
+jumpspeed = jumpspeed_normal
+
+image_speed = 1/6;
