@@ -44,7 +44,7 @@ _angle = 0;
 _angle_increment = 0.01;
 _angle_multiplier = 0.75;
 
-image_speed = 1/6;
+image_speed = 1/6*obj_game_manager.deltaspeed;
 
 proposkull_state = proposkull_state._up_down;
 </string>

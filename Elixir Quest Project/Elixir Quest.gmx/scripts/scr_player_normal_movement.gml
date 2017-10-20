@@ -2,18 +2,18 @@ scr_player_get_movement_inputs();
 
 //Normal Movement
     move = key_right + key_left;
-    hsp = move * movespeed;
-    if(vsp < 10) vsp += grav;
+    hsp = move * movespeed*obj_game_manager.deltaspeed;
+    if(vsp < 10*obj_game_manager.deltaspeed) vsp += grav*obj_game_manager.deltaspeed;
     
     if(place_meeting(x,y+1,obj_wall_black))
     {
         if (key_jump)
         {
-            vsp = -jumpspeed; 
+            vsp = -jumpspeed*obj_game_manager.deltaspeed; 
             audio_play_sound(snd_jump,0,0);
         }
     }
-    if(vsp < 0) && (!key_jump_held) vsp = max(vsp,-jumpspeed/4)
+    if(vsp < 0) && (!key_jump_held) vsp = max(vsp,-jumpspeed/4*obj_game_manager.deltaspeed)
 
 //Ladder function
     if (place_meeting(x,y,obj_ladder) && ((key_up) || (key_down)))

@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1596</w>
+    <w>1491</w>
     <h>773</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -293,7 +293,7 @@
     <instance objName="obj_wall_grey_brick" x="402" y="384" name="inst_6A2C6F1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_invisable_oneway_dropdown" x="353" y="376" name="inst_65E95852" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_proposkull" x="432" y="336" name="inst_55FB1F21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_proposkull" x="512" y="368" name="inst_331EC03F" locked="0" code="_angle = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_proposkull" x="512" y="368" name="inst_331EC03F" locked="0" code="_angle = 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

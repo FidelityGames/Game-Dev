@@ -74,12 +74,7 @@ mpos = 0;
     
     var enter;
     enter = max(keyboard_check_pressed(vk_enter),keyboard_check_pressed(ord("E")),keyboard_check_pressed(vk_space),0);
-    if (enter == 1) scr_menu_pause();  
-    
-
-
-
-
+    if (enter == 1) scr_menu_pause(); 
 </string>
           </argument>
         </arguments>
@@ -133,8 +128,6 @@ for (m = 0; m &lt; array_length_1d(menu); m += 1)
 draw_set_colour(c_yellow);
 draw_text(view_xview[0] + 240 ,view_yview[0] + 84 + (mpos * space),string(menu[mpos]));
 draw_set_colour(c_white);
-
-
 </string>
           </argument>
         </arguments>

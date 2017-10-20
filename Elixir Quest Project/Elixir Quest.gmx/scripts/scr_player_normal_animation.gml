@@ -12,4 +12,4 @@
     {
         image_speed = 0;
     }
-    else image_speed = 1/6;
+    else image_speed = 1/6*obj_game_manager.deltaspeed;
